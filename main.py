@@ -31,7 +31,7 @@ def training(prof):
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        return redirect('/success')
+        return 'Заявка принята'
     return render_template('login.html', title='Аварийный доступ', form=form)
 
 
