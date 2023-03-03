@@ -16,8 +16,9 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Доступ')
 
 
+@app.route('/')
 @app.route('/index/<title>')
-def index(title):
+def index(title='default'):
     return render_template('base.html', title=title)
 
 
