@@ -46,6 +46,14 @@ def prof(list):
     return render_template('prof.html', list=list, proff=list_prof)
 
 
+@app.route('/distribution')
+def distribution():
+    distribution = ['Ридли Скотт', 'Энди Уир',
+                 'Марк Уотни', 'Венката Капур', 'Тэдди Сандерс',
+                 'Шон Бин']
+    return render_template('distribution.html', distribution=distribution)
+
+
 @app.route('/answer')
 @app.route('/auto_answer')
 def answer():

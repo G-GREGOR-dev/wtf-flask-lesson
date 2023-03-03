@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="align-content: center">
+    <form action="" method="post" novalidate>
+        <h1 style="margin-left: 80px">Размещение по каютам</h1>
+        {% for item in distribution %}
+             {% if distribution.index(item) == 0 %}
+                <h6 style="margin-left: 100px">{{ item }} - Каюта № {{ distribution.index(item) + 1 }} - капитан корабля<br></h6>
+            {% else %}
+                <h6 style="margin-left: 100px">{{ item }} - Каюта № {{ distribution.index(item) + 1 }}<br></h6>
+            {% endif %}
+        {% endfor %}
+    </form>
+</div>
+{% endblock %}
