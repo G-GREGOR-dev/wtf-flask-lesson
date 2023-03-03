@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% if "инженер" in title or "строитель" in title %}
+    {% if "инженер" in prof or "строитель" in prof %}
         <h3 style="text-align: center ">Инженерные тренажеры </h3>
         <img src="{{ url_for('static', filename='images/image1.png') }}"
              alt="здесь должна была быть картинка, но не нашлась" width=800>
